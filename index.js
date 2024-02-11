@@ -16,8 +16,6 @@ app.post("/submit", (req, res) => {
   var randAdj=adj[Math.floor(Math.random()*adj.length)];
   var randNoun=noun[Math.floor(Math.random()*noun.length)];
   let d=new Date().getFullYear();
-
-  console.log(d)
   res.render('index.ejs',{adj:randAdj,
   noun:randNoun,year:d})
 });
