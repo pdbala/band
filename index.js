@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
   console.log(d)
   // res.render('index.ejs',{adj:randAdj,
   // noun:randNoun,year:d})
-  res.send(`<h3><pre>        </pre> ↖️ Refresh to see more</h3><center><h1>Band name Generated is ${randAdj} ${randNoun}</h1><center>  <h5>Copyright@ ${d}</h5>`);
+  res.send(`<h3> ↗️ Refresh to see more</h3><center><h1>Band name Generated is ${randAdj} ${randNoun}</h1><center>  <h5>Copyright@ ${d}</h5>`);
 });
 
 app.listen(port, () => {
