@@ -7,19 +7,20 @@ const port = 3000;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'))
 
-app.get("/", (req, res) => {
-  res.render('index.ejs');
-  console.log('rendering index.ejs')
-});
+// app.get("/", (req, res) => {
+//   res.render('index.ejs');
+//   console.log('rendering index.ejs')
+// });
 
-app.post("/submit", (req, res) => {
+app.get("/", (req, res) => {
   var randAdj=adj[Math.floor(Math.random()*adj.length)];
   var randNoun=noun[Math.floor(Math.random()*noun.length)];
   let d=new Date().getFullYear();
 
   console.log(d)
-  res.render('index.ejs',{adj:randAdj,
-  noun:randNoun,year:d})
+  // res.render('index.ejs',{adj:randAdj,
+  // noun:randNoun,year:d})
+  res.send(`<h1>${randAdj},ff  ${randNoun},${d}</h1>`);
 });
 
 app.listen(port, () => {
